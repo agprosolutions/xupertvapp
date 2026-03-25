@@ -7,71 +7,85 @@
 <style>
 body{
 margin:0;
-font-family: -apple-system, BlinkMacSystemFont, Arial;
-background: #0b0f1a;
+font-family:-apple-system,BlinkMacSystemFont,Arial;
+background:linear-gradient(180deg,#020617,#0f172a);
 color:white;
 }
 
 /* HEADER */
 .header{
-padding:25px;
+padding:30px 20px;
 text-align:center;
-background: linear-gradient(135deg,#0f172a,#1e293b);
-box-shadow:0 0 20px rgba(0,0,0,0.5);
+background:rgba(15,23,42,0.8);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .header h1{
 margin:0;
-font-size:28px;
+font-size:30px;
+letter-spacing:0.5px;
 }
 
 .header p{
 color:#94a3b8;
-margin-top:5px;
+margin-top:8px;
+font-size:14px;
 }
 
 /* GRID */
 .container{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 padding:20px;
 }
 
 /* CARD */
 .card{
-background:#111827;
+background:rgba(17,24,39,0.7);
 border-radius:20px;
 padding:20px;
 transition:0.3s;
-box-shadow:0 10px 20px rgba(0,0,0,0.4);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+border:1px solid rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px) scale(1.01);
 }
 
-/* APP ICON */
+/* ICON */
 .icon{
 width:60px;
 height:60px;
 border-radius:15px;
-margin-bottom:10px;
-background:linear-gradient(135deg,#ef4444,#7f1d1d);
+margin-bottom:12px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-weight:bold;
+font-size:22px;
+background:linear-gradient(135deg,#22c55e,#16a34a);
 }
 
 /* TEXT */
 .card h2{
 margin:5px 0;
+font-size:20px;
 }
 
 .card p{
 color:#9ca3af;
 font-size:14px;
+}
+
+/* PRICE */
+.price{
+margin-top:10px;
+font-size:18px;
+font-weight:bold;
+color:#22c55e;
 }
 
 /* BUTTONS */
@@ -83,6 +97,7 @@ border:none;
 border-radius:12px;
 font-size:15px;
 cursor:pointer;
+transition:0.2s;
 }
 
 .buy{
@@ -90,20 +105,28 @@ background:linear-gradient(45deg,#22c55e,#16a34a);
 color:white;
 }
 
+.buy:hover{
+opacity:0.9;
+}
+
 .access{
-background:#1f2937;
+background:#020617;
 color:#cbd5f5;
-border:1px solid #374151;
+border:1px solid #1e293b;
+}
+
+.access:hover{
+background:#0f172a;
 }
 
 /* BADGE */
 .badge{
 font-size:12px;
 background:#22c55e;
-padding:3px 8px;
-border-radius:10px;
+padding:4px 10px;
+border-radius:20px;
 display:inline-block;
-margin-bottom:5px;
+margin-bottom:8px;
 }
 
 /* FOOTER */
@@ -120,21 +143,22 @@ font-size:13px;
 <body>
 
 <div class="header">
-<h1>AgProApps Store</h1>
+<h1>AgProApps Store 🚀</h1>
 <p>Apps premium • TV • Deportes • Películas</p>
 </div>
 
 <div class="container">
 
-<!-- XuperTV -->
+<!-- APP TEMPLATE -->
 <div class="card">
 <div class="badge">Popular</div>
-<div class="icon">TV</div>
+<div class="icon">📺</div>
 <h2>XuperTV</h2>
-<p>TV en vivo, deportes, películas y contenido premium en HD.</p>
+<p>TV en vivo, deportes y contenido premium en HD.</p>
+<div class="price">$15</div>
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=XuperTV">
-<button class="btn buy">Comprar acceso</button>
+<button class="btn buy">Comprar ahora</button>
 </a>
 
 <a href="verificar.html">
@@ -142,14 +166,14 @@ font-size:13px;
 </a>
 </div>
 
-<!-- AK47 Sports -->
 <div class="card">
 <div class="icon">🏆</div>
 <h2>AK47 Sports</h2>
-<p>Eventos deportivos en vivo: NFL, NBA, UFC y más.</p>
+<p>Eventos deportivos en vivo: NFL, NBA, UFC.</p>
+<div class="price">$15</div>
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=AK47 Sports">
-<button class="btn buy">Desbloquear</button>
+<button class="btn buy">Comprar ahora</button>
 </a>
 
 <a href="verificar.html">
@@ -157,106 +181,14 @@ font-size:13px;
 </a>
 </div>
 
-<!-- FilmApp -->
 <div class="card">
 <div class="icon">🎬</div>
 <h2>FilmApp</h2>
-<p>Películas y series en HD con estrenos recientes.</p>
+<p>Películas y series HD con estrenos recientes.</p>
+<div class="price">$15</div>
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=FilmApp">
-<button class="btn buy">Ver contenido</button>
-</a>
-
-<a href="verificar.html">
-<button class="btn access">Ya compré</button>
-</a>
-</div>
-
-<!-- Stream Flix -->
-<div class="card">
-<div class="badge">Nuevo</div>
-<div class="icon">🍿</div>
-<h2>Stream Flix</h2>
-<p>Streaming moderno tipo Netflix con gran catálogo.</p>
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=Stream Flix">
-<button class="btn buy">Empezar ahora</button>
-</a>
-
-<a href="verificar.html">
-<button class="btn access">Ya compré</button>
-</a>
-</div>
-
-<!-- Magma TV -->
-<div class="card">
-<div class="icon">🔥</div>
-<h2>Magma TV</h2>
-<p>Canales en vivo + contenido internacional.</p>
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=Magma TV">
-<button class="btn buy">Acceder ahora</button>
-</a>
-
-<a href="verificar.html">
-<button class="btn access">Ya compré</button>
-</a>
-</div>
-
-<!-- MXL Movie -->
-<div class="card">
-<div class="icon">🎥</div>
-<h2>MXL Movie</h2>
-<p>Películas organizadas, ideal para TV Box.</p>
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=MXL Movie">
-<button class="btn buy">Desbloquear</button>
-</a>
-
-<a href="verificar.html">
-<button class="btn access">Ya compré</button>
-</a>
-</div>
-
-<!-- OnStream -->
-<div class="card">
-<div class="icon">⚡</div>
-<h2>OnStream</h2>
-<p>Streaming rápido con contenido actualizado.</p>
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=OnStream">
-<button class="btn buy">Ver ahora</button>
-</a>
-
-<a href="verificar.html">
-<button class="btn access">Ya compré</button>
-</a>
-</div>
-
-<!-- MXL TV -->
-<div class="card">
-<div class="icon">📺</div>
-<h2>MXL TV</h2>
-<p>TV en vivo y entretenimiento completo.</p>
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=MXL TV">
-<button class="btn buy">Acceder</button>
-</a>
-
-<a href="verificar.html">
-<button class="btn access">Ya compré</button>
-</a>
-</div>
-
-<!-- FlixVision -->
-<div class="card">
-<div class="badge">Top</div>
-<div class="icon">⭐</div>
-<h2>FlixVision</h2>
-<p>Películas y series con interfaz moderna.</p>
-
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=anto7004@hotmail.com&amount=15&currency_code=USD&item_name=FlixVision">
-<button class="btn buy">Premium</button>
+<button class="btn buy">Comprar ahora</button>
 </a>
 
 <a href="verificar.html">
